@@ -1,0 +1,53 @@
+<!--
+  test_chatwoot.html
+
+  A minimal HTML page to test the Chatwoot embeddable widget locally.
+  - Ensure your Chatwoot server is running at the baseUrl specified below.
+  - Replace the websiteToken value with the token generated for your Website Inbox in Chatwoot.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatwoot Widget Test</title>
+    <!-- Load the Chatwoot SDK asynchronously -->
+    <script>
+        window.chatwootSettings = {"position":"right","type":"expanded_bubble","launcherTitle":"Chat with us"};
+        (function(d, t) {
+            // Base URL of your Chatwoot installation. If Chatwoot runs on a different port or domain, update this.
+            var BASE_URL = "https://jwpai.uk";
+            var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+            g.src = BASE_URL + "/packs/js/sdk.js";
+            g.async = true;
+            s.parentNode.insertBefore(g, s);
+            g.onload = function() {
+                // Initialize the widget after the SDK loads
+                window.chatwootSDK.run({
+                    websiteToken: '4u5G4fetQmGmwheGNKMkRQaD',
+                    baseUrl: BASE_URL
+                });
+            };
+        })(document, "script");
+    </script>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 40px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chatwoot Widget Test Page</h1>
+    <p>
+        If your Chatwoot server is running correctly and the Website Inbox token is valid,
+        the chat widget should appear in the bottom right corner of this page once the
+        SDK finishes loading.
+    </p>
+    <p>
+        Try sending a message through the widget. It should appear in your Chatwoot dashboard
+        under the corresponding inbox.
+    </p>
+</body>
+</html>

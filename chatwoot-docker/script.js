@@ -1,0 +1,15 @@
+<script>
+  (function(d,t) {
+    var BASE_URL="http://localhost:3000";
+    var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=BASE_URL+"/packs/js/sdk.js";
+    g.async = true;
+    s.parentNode.insertBefore(g,s);
+    g.onload=function(){
+      window.chatwootSDK.run({
+        websiteToken: '4u5G4fetQmGmwheGNKMkRQaD',
+        baseUrl: BASE_URL
+      })
+    }
+  })(document,"script");
+</script>
