@@ -18,11 +18,12 @@
     "fs": "^0.0.1-security",
     "ollama": "^0.5.16",
     "path": "^0.12.7",
-    "pdf-parse": "^1.1.1",
-    "typescript": "^5.8.3"
+    "pdf-parse": "^1.1.1"
   },
   "devDependencies": {
     "@types/node": "^24.0.14",
-    "@types/pdf-parse": "^1.1.5"
+    "@types/pdf-parse": "^1.1.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   }
 }
