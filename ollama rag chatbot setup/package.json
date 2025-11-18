@@ -1,0 +1,28 @@
+{
+  "name": "ollama-rag-chatbot-setup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@chroma-core/default-embed": "^0.1.8",
+    "axios": "^1.10.0",
+    "cheerio": "^1.1.0",
+    "chromadb": "^3.0.9",
+    "fs": "^0.0.1-security",
+    "ollama": "^0.5.16",
+    "path": "^0.12.7",
+    "pdf-parse": "^1.1.1",
+    "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.14",
+    "@types/pdf-parse": "^1.1.5"
+  }
+}
